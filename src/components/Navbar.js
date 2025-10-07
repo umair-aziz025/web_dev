@@ -39,8 +39,9 @@ const Navbar = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
+          <span className="logo-bracket">{'<'}</span>
           <span className="logo-text">Ahsan</span>
-          <span className="logo-dot">.</span>
+          <span className="logo-bracket">{'/>'}</span>
         </motion.div>
 
         <div className={`nav-menu ${menuOpen ? 'active' : ''}`}>

@@ -30,10 +30,13 @@
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   cursor: pointer;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .logo-text {
@@ -41,11 +44,14 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-weight: 800;
 }
 
-.logo-dot {
-  color: var(--accent-color);
-  font-size: 2.5rem;
+.logo-bracket {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 600;
+  opacity: 0.8;
 }
 
 .nav-menu {
