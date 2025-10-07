@@ -1,11 +1,12 @@
 import React, { useCallback } from 'react';
 import Particles from 'react-tsparticles';
-import { loadFull } from 'tsparticles';
+import { loadSlim } from 'tsparticles-slim';
 import './ParticlesBackground.css';
 
 const ParticlesBackground = ({ theme }) => {
   const particlesInit = useCallback(async (engine) => {
-    await loadFull(engine);
+    // Load only necessary features for better performance
+    await loadSlim(engine);
   }, []);
 
   return (

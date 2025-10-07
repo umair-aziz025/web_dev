@@ -8,6 +8,7 @@ import {
   SiTailwindcss, SiFramer, SiVisualstudiocode, SiNetlify, 
   SiVercel, SiRedux 
 } from 'react-icons/si';
+import DotBubbles from './DotBubbles';
 import './Skills.css';
 
 const Skills = () => {
@@ -71,7 +72,10 @@ const Skills = () => {
                 y: -10,
                 boxShadow: `0 20px 40px ${skill.color}40`
               }}
+              style={{ position: 'relative', overflow: 'visible' }}
             >
+              {/* Only show bubbles on first 4 cards */}
+              {index > 8 && <DotBubbles count={4} />}
               <motion.div 
                 className="skill-icon"
                 style={{ color: skill.color }}

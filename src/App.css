@@ -2,6 +2,9 @@
   min-height: 100vh;
   background: var(--bg-primary);
   position: relative;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
 }
 
 /* Global Section Styling */
@@ -9,12 +12,16 @@ section {
   padding: 100px 0;
   position: relative;
   z-index: 1;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* Section Headings */

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGraduationCap, FaCode, FaLaptopCode } from 'react-icons/fa';
+import DotBubbles from './DotBubbles';
 import './About.css';
 
 const About = () => {
@@ -53,7 +54,9 @@ const About = () => {
               className="about-card"
               whileHover={{ scale: 1.05, y: -10 }}
               transition={{ type: 'spring', stiffness: 300 }}
+              style={{ position: 'relative', overflow: 'visible' }}
             >
+              <DotBubbles count={6} />
               <motion.div
                 className="card-icon"
                 whileHover={{ rotate: 360 }}
@@ -70,7 +73,9 @@ const About = () => {
               className="about-card"
               whileHover={{ scale: 1.05, y: -10 }}
               transition={{ type: 'spring', stiffness: 300 }}
+              style={{ position: 'relative', overflow: 'visible' }}
             >
+              <DotBubbles count={6} />
               <motion.div
                 className="card-icon"
                 whileHover={{ rotate: 360 }}
@@ -87,7 +92,9 @@ const About = () => {
               className="about-card"
               whileHover={{ scale: 1.05, y: -10 }}
               transition={{ type: 'spring', stiffness: 300 }}
+              style={{ position: 'relative', overflow: 'visible' }}
             >
+              <DotBubbles count={6} />
               <motion.div
                 className="card-icon"
                 whileHover={{ rotate: 360 }}

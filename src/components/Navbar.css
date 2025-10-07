@@ -7,6 +7,9 @@
   padding: 20px 0;
   transition: all 0.3s ease;
   background: transparent;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .navbar.scrolled {
@@ -141,25 +144,29 @@
 @media (max-width: 768px) {
   .nav-container {
     padding: 0 20px;
+    max-width: 100%;
   }
 
   .nav-menu {
     position: fixed;
     top: 70px;
-    right: -100%;
+    left: 0;
+    right: 0;
+    transform: translateX(100%);
     flex-direction: column;
     background: var(--bg-secondary);
     backdrop-filter: blur(10px);
     width: 100%;
+    max-width: 100vw;
     padding: 40px 0;
     gap: 30px;
-    transition: right 0.3s ease;
+    transition: transform 0.3s ease;
     box-shadow: 0 10px 30px var(--shadow);
     border-top: 1px solid var(--border-color);
   }
 
   .nav-menu.active {
-    right: 0;
+    transform: translateX(0);
   }
 
   .menu-icon {
@@ -179,6 +186,7 @@
 @media (max-width: 480px) {
   .nav-container {
     padding: 0 15px;
+    max-width: 100%;
   }
 
   .logo {
@@ -192,6 +200,10 @@
   }
 
   .nav-actions {
-    gap: 15px;
+    gap: 10px;
+  }
+
+  .menu-icon {
+    font-size: 1.5rem;
   }
 }

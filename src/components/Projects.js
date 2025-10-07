@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import DotBubbles from './DotBubbles';
 import './Projects.css';
 
 const Projects = () => {
@@ -77,7 +78,9 @@ const Projects = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -15 }}
+              style={{ position: 'relative', overflow: 'visible' }}
             >
+              <DotBubbles count={6} />
               <motion.div 
                 className="project-image"
                 style={{ background: project.gradient }}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
+import DotBubbles from './DotBubbles';
 import './Contact.css';
 
 const Contact = () => {
@@ -118,7 +119,9 @@ const Contact = () => {
             className="contact-form"
             onSubmit={handleSubmit}
             variants={fadeInUp}
+            style={{ position: 'relative', overflow: 'visible' }}
           >
+            <DotBubbles count={8} />
             <div className="form-group">
               <motion.input
                 type="text"

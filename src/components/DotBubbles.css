@@ -1,0 +1,13 @@
+.dot-bubble {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
+  backdrop-filter: blur(1px);
+  z-index: 1;
+}
+
+/* Ensure bubbles are visible in both themes */
+[data-theme="light"] .dot-bubble {
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+}

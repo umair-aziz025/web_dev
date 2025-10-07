@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown } from 'react-icons/fa';
 import { Link } from 'react-scroll';
+import TypingAnimation from './TypingAnimation';
 import './Hero.css';
 
 const Hero = () => {
@@ -73,14 +74,29 @@ const Hero = () => {
               className="hero-name"
               variants={itemVariants}
             >
-              Muhammad <span className="gradient-text">Ahsan Ali</span>
+              <TypingAnimation 
+                text="Muhammad " 
+                delay={300}
+                speed={60}
+              />
+              <span className="gradient-text">
+                <TypingAnimation 
+                  text="Ahsan Ali" 
+                  delay={1400}
+                  speed={60}
+                />
+              </span>
             </motion.h1>
             
             <motion.h2 
               className="hero-title"
               variants={itemVariants}
             >
-              Frontend Web Developer
+              <TypingAnimation 
+                text="Frontend Web Developer" 
+                delay={2300}
+                speed={50}
+              />
             </motion.h2>
             
             <motion.p 
