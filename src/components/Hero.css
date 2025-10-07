@@ -5,18 +5,28 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  padding-top: 80px;
+  padding: 120px 20px 80px;
 }
 
 .hero-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
-  text-align: center;
+  width: 100%;
+  z-index: 1;
 }
 
 .hero-content {
-  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
 }
 
 .hero-greeting {
@@ -27,11 +37,12 @@
 }
 
 .hero-name {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   font-weight: 800;
   margin-bottom: 10px;
   font-family: 'Playfair Display', serif;
   line-height: 1.2;
+  color: var(--text-primary);
 }
 
 .gradient-text {
@@ -39,34 +50,34 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  display: inline-block;
 }
 
 .hero-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--primary-color);
   margin-bottom: 25px;
   font-weight: 600;
 }
 
 .hero-description {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--text-secondary);
-  max-width: 700px;
-  margin: 0 auto 40px;
+  max-width: 600px;
+  margin-bottom: 40px;
   line-height: 1.8;
 }
 
 .hero-buttons {
   display: flex;
   gap: 20px;
-  justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   flex-wrap: wrap;
 }
 
 .btn {
-  padding: 15px 35px;
-  font-size: 1rem;
+  padding: 15px 40px;
+  font-size: 1.1rem;
   font-weight: 600;
   border: none;
   border-radius: 50px;
@@ -82,8 +93,8 @@
 
 .btn-secondary {
   background: transparent;
-  color: var(--primary-color);
   border: 2px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
 .btn-secondary:hover {
@@ -93,52 +104,318 @@
 
 .hero-social {
   display: flex;
-  gap: 25px;
-  justify-content: center;
-  margin-top: 40px;
+  gap: 20px;
 }
 
 .social-icon {
-  font-size: 2rem;
-  color: var(--text-secondary);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
   transition: all 0.3s ease;
-  cursor: pointer;
 }
 
 .social-icon:hover {
-  color: var(--primary-color);
+  background: var(--gradient);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 5px 20px var(--shadow);
 }
 
+/* Profile Image Styles */
+.hero-image-container {
+  flex: 0 0 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image-wrapper {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--bg-card);
+  box-shadow: 0 20px 60px var(--shadow);
+  position: relative;
+  z-index: 2;
+}
+
+.profile-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  font-weight: 800;
+  color: white;
+  border: 5px solid var(--bg-card);
+  box-shadow: 0 20px 60px var(--shadow);
+  position: relative;
+  z-index: 2;
+}
+
+.profile-ring {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border: 3px solid var(--primary-color);
+  border-radius: 50%;
+  animation: rotate 10s linear infinite;
+  opacity: 0.3;
+}
+
+.profile-ring-2 {
+  position: absolute;
+  top: -35px;
+  left: -35px;
+  right: -35px;
+  bottom: -35px;
+  border: 2px dashed var(--secondary-color);
+  border-radius: 50%;
+  animation: rotate 15s linear infinite reverse;
+  opacity: 0.2;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Background Decorations */
+.bg-decoration {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.bg-decoration-1 {
+  top: -200px;
+  left: -200px;
+  background: var(--primary-color);
+}
+
+.bg-decoration-2 {
+  bottom: -200px;
+  right: -200px;
+  background: var(--accent-color);
+}
+
+/* Scroll Indicator */
 .scroll-indicator {
   position: absolute;
-  bottom: 30px;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 2rem;
   color: var(--primary-color);
   cursor: pointer;
+  z-index: 10;
 }
 
-@media (max-width: 768px) {
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-content {
+    gap: 40px;
+  }
+
   .hero-name {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .hero-title {
     font-size: 1.8rem;
   }
 
+  .profile-image-wrapper {
+    width: 300px;
+    height: 300px;
+  }
+
+  .profile-placeholder {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 20px 60px;
+  }
+
+  .hero-content {
+    flex-direction: column-reverse;
+    gap: 50px;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-name {
+    font-size: 2.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
   .hero-description {
     font-size: 1rem;
+    margin: 0 auto 30px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+
+  .hero-social {
+    justify-content: center;
+  }
+
+  .social-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+
+  .profile-image-wrapper {
+    width: 280px;
+    height: 280px;
+  }
+
+  .profile-placeholder {
+    font-size: 4rem;
+  }
+
+  .hero-image-container {
+    flex: 1 1 auto;
+  }
+
+  .scroll-indicator {
+    bottom: 20px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 90px 15px 50px;
+  }
+
+  .hero-greeting {
+    font-size: 1.2rem;
+  }
+
+  .hero-name {
+    font-size: 2rem;
+  }
+
+  .hero-title {
+    font-size: 1.3rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
   }
 
   .hero-buttons {
     flex-direction: column;
-    align-items: center;
+    width: 100%;
+    gap: 10px;
   }
 
   .btn {
     width: 100%;
-    max-width: 300px;
+    padding: 12px 25px;
+    font-size: 0.95rem;
+  }
+
+  .profile-image-wrapper {
+    width: 240px;
+    height: 240px;
+  }
+
+  .profile-placeholder {
+    font-size: 3.5rem;
+  }
+
+  .profile-ring {
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+  }
+
+  .profile-ring-2 {
+    top: -25px;
+    left: -25px;
+    right: -25px;
+    bottom: -25px;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .bg-decoration {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 375px) {
+  .hero-name {
+    font-size: 1.8rem;
+  }
+
+  .hero-title {
+    font-size: 1.2rem;
+  }
+
+  .profile-image-wrapper {
+    width: 220px;
+    height: 220px;
+  }
+
+  .profile-placeholder {
+    font-size: 3rem;
   }
 }

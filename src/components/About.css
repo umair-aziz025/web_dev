@@ -1,5 +1,5 @@
 .about {
-  background: var(--dark-bg);
+  background: var(--bg-primary);
   position: relative;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .about-card {
-  background: var(--dark-card);
+  background: var(--bg-card);
   padding: 30px;
   border-radius: 20px;
   border: 1px solid rgba(99, 102, 241, 0.1);
@@ -72,6 +72,12 @@
   opacity: 0.7;
 }
 
+@media (max-width: 1200px) {
+  .about-content {
+    gap: 50px;
+  }
+}
+
 @media (max-width: 992px) {
   .about-content {
     grid-template-columns: 1fr;
@@ -90,5 +96,31 @@
 
   .about-text p {
     font-size: 1rem;
+  }
+
+  .about-info {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text h3 {
+    font-size: 1.6rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+
+  .about-card {
+    padding: 25px;
+  }
+
+  .card-icon {
+    font-size: 2.5rem;
+  }
+
+  .about-card h4 {
+    font-size: 1.3rem;
   }
 }

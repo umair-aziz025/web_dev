@@ -1,12 +1,14 @@
 .App {
   min-height: 100vh;
-  background: var(--dark-bg);
+  background: var(--bg-primary);
+  position: relative;
 }
 
 /* Global Section Styling */
 section {
   padding: 100px 0;
   position: relative;
+  z-index: 1;
 }
 
 .container {
@@ -88,7 +90,21 @@ section {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+
+  section {
+    padding: 80px 0;
+  }
+}
+
 @media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
   section {
     padding: 60px 0;
   }
@@ -99,5 +115,23 @@ section {
 
   .section-title .subtitle {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  section {
+    padding: 50px 0;
+  }
+
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-title .subtitle {
+    font-size: 0.95rem;
   }
 }

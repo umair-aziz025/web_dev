@@ -1,5 +1,5 @@
 .skills {
-  background: linear-gradient(180deg, var(--dark-bg) 0%, #1a1f35 100%);
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
 }
 
 .skills-grid {
@@ -10,7 +10,7 @@
 }
 
 .skill-card {
-  background: var(--dark-card);
+  background: var(--bg-card);
   padding: 30px 20px;
   border-radius: 20px;
   border: 1px solid rgba(99, 102, 241, 0.1);
@@ -70,6 +70,13 @@
   font-weight: 600;
 }
 
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .skills-grid {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -82,5 +89,32 @@
 
   .skill-card h4 {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .skill-card {
+    padding: 20px 15px;
+  }
+
+  .skill-icon {
+    font-size: 2.5rem;
+  }
+
+  .skill-card h4 {
+    font-size: 0.9rem;
+  }
+
+  .progress-bar {
+    height: 6px;
+  }
+
+  .progress-text {
+    font-size: 0.85rem;
   }
 }

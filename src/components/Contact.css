@@ -1,5 +1,5 @@
 .contact {
-  background: linear-gradient(180deg, #1a1f35 0%, var(--dark-bg) 100%);
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
 }
 
 .contact-content {
@@ -66,7 +66,7 @@
 }
 
 .contact-form {
-  background: var(--dark-card);
+  background: var(--bg-card);
   padding: 40px;
   border-radius: 20px;
   border: 1px solid rgba(99, 102, 241, 0.1);
@@ -80,7 +80,7 @@
 .form-group textarea {
   width: 100%;
   padding: 15px 20px;
-  background: rgba(15, 23, 42, 0.8);
+  background: var(--bg-secondary);
   border: 1px solid rgba(99, 102, 241, 0.2);
   border-radius: 10px;
   color: var(--text-primary);
@@ -150,5 +150,48 @@
     width: 60px;
     height: 60px;
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+    padding: 25px 15px;
+  }
+
+  .contact-info h3 {
+    font-size: 1.8rem;
+  }
+
+  .contact-info p {
+    font-size: 0.95rem;
+  }
+
+  .contact-item {
+    padding: 15px;
+  }
+
+  .contact-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .contact-item h4 {
+    font-size: 1rem;
+  }
+
+  .contact-item p {
+    font-size: 0.9rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  .submit-btn {
+    padding: 12px 30px;
+    font-size: 0.95rem;
   }
 }
