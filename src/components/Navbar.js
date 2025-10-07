@@ -12,7 +12,15 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      const isScrolled = window.scrollY > 50;
+      setScrolled(isScrolled);
+      
+      // Update body class to control mobile menu position
+      if (isScrolled) {
+        document.body.classList.add('navbar-scrolled');
+      } else {
+        document.body.classList.remove('navbar-scrolled');
+      }
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -44,7 +52,9 @@ const Navbar = () => {
           <span className="logo-bracket">{'/>'}</span>
         </motion.div>
 
-        <div className={`nav-menu ${menuOpen ? 'active' : ''}`}>
+        <div 
+          className={`nav-menu ${menuOpen ? 'active' : ''}`}
+        >
           {navItems.map((item, index) => (
             <motion.div
               key={item.name}
